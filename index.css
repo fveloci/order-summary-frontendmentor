@@ -81,7 +81,11 @@ body {
     margin: 0;
 }
 .background{
+<<<<<<< HEAD
     background-image: url("./images/pattern-background-desktop.svg");
+=======
+    background-image: url("/images/pattern-background-desktop.svg");
+>>>>>>> d0f145d307dc69473bd53c7897b38e711939779c
     background-repeat: no-repeat;
     background-size: 100%;
     background-color: var(--pale-blue);
@@ -204,7 +208,11 @@ body {
 }
 @media only screen and (max-width: 600px) {
     .background {
+<<<<<<< HEAD
         background-image: url("./images/pattern-background-mobile.svg");
+=======
+        background-image: url("/images/pattern-background-mobile.svg");
+>>>>>>> d0f145d307dc69473bd53c7897b38e711939779c
         background-repeat: no-repeat;
         background-size: 100%;
         background-color: var(--pale-blue); 
