@@ -5,6 +5,75 @@
     --desaturated-blue: hsl(224, 23%, 55%);
     --dark-blue: hsl(223, 47%, 23%);
 }
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/*Remove default margin*/
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/*Set core body defaults*/
+body {
+    min-height: 100vh;
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+}
+/*A elements that dont´t have a class get default styles*/
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+}
+
+/*Make images easier to work with*/
+img,
+picture {
+    max-width: 100%;
+    display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+    font: inherit
+}
+
+/* Remove all animations, transitions and smooth scroll for people
+that prefer not to see them*/
+@media (prefers-reduced-motion: reduce){
+    hmtl:focus-within {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
 html, button {
     font-family: 'Red Hat Display', sans-serif;
 }
@@ -12,7 +81,7 @@ body {
     margin: 0;
 }
 .background{
-    background-image: url(/images/pattern-background-desktop.svg);
+    background-image: url("./images/pattern-background-desktop.svg");
     background-repeat: no-repeat;
     background-size: 100%;
     background-color: var(--pale-blue);
@@ -36,34 +105,40 @@ body {
     width: 100%;
 }
 .card-image img{
+    display: block;
     width: 100%;
     border-radius: 15px 15px 0 0;
 }
 .summary {
     width: 80%;
     margin: auto;
+    
 }
 .summary-title{
     text-align: center;
     font-weight: 900 bold;
+    margin-top: 30px;
 }
 .summary p {
     font-size: 16px;
     text-align: center;
-    padding: 0 10px;
+    padding: 10px 0px;
     color: gray;
 }
 .plan {
     border-radius: 5px;
     margin: 5px auto;
     background-color: whitesmoke;
-    width: 80%;
+    width: 75%;
     height: auto;
+    display: flex;
+    align-items: center;
+    padding-right: 20px;
 }
 .plan img {
     color: hsl(223, 47%, 23%);
-    width: 37px;
-    padding: 15px;
+    width: 40px;
+    margin: 20px;
     vertical-align: middle;
 }
 .plan-type {
@@ -71,7 +146,7 @@ body {
     vertical-align: middle;        
 }
 .plan-type-title{
-    font-weight: 700;
+    font-weight: 900;
     font-size: 14px;
 }
 .price {
@@ -79,14 +154,17 @@ body {
     font-size: 14px;
 }
 .plan-change {           
-    display: inline;        
+    margin-left: auto;        
 }
-.plan-change a {
-    float: right;
+.plan-change a {    
     font-size: small;
-    font-weight: 900;    
-    margin: 25px 15px;   
+    font-weight: 900;      
     color: var(--bright-blue);    
+}
+
+.plan-change a:hover {
+    color: var(--desaturated-blue);
+    text-decoration: none;
 }
 
 .actions {
@@ -110,15 +188,25 @@ body {
     -moz-box-shadow: 0px 5px 30px -13px var(--bright-blue);
     box-shadow: 0px 5px 30px -13px var(--bright-blue);
 }
+.proceed:hover {
+    background-color: var(--desaturated-blue);
+}
 .cancel{
     background-color: white;
     color: gray;
 }
+.cancel:hover {
+    color: black;
+}
+
+.on-hover:hover {
+    transition: all 0.2s;    
+}
 @media only screen and (max-width: 600px) {
     .background {
-        background-image: url(/images/pattern-background-mobile.svg);
+        background-image: url("./images/pattern-background-mobile.svg");
         background-repeat: no-repeat;
         background-size: 100%;
-        background-color: var(--pale-blue); /* Aplicará solo desde 0 hasta 600px */
+        background-color: var(--pale-blue); 
     }
   }
