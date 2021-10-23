@@ -129,7 +129,7 @@ body {
     border-radius: 5px;
     margin: 5px auto;
     background-color: whitesmoke;
-    width: 75%;
+    width: 80%;
     height: auto;
     display: flex;
     align-items: center;
@@ -180,6 +180,7 @@ body {
     padding: 10px;
     border-radius: 10px;
     font-weight: 700;
+    font-size: 14px;
 }
 .proceed {
     background-color: var(--bright-blue);
