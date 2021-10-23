@@ -1,0 +1,124 @@
+:root {
+    --pale-blue: hsl(225, 100%, 94%);
+    --bright-blue: hsl(245, 75%, 52%);
+    --very-pale-blue: hsl(225, 100%, 98%);
+    --desaturated-blue: hsl(224, 23%, 55%);
+    --dark-blue: hsl(223, 47%, 23%);
+}
+html, button {
+    font-family: 'Red Hat Display', sans-serif;
+}
+body {
+    margin: 0;
+}
+.background{
+    background-image: url(/images/pattern-background-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-color: var(--pale-blue);
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+}
+.card {
+    align-self: center;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 15px 15px 15px 15px;
+    background-color: white;
+    width: 375px;
+    height: auto;
+    -webkit-box-shadow: 0px 14px 33px -6px rgba(128,128,128,0.39);
+    -moz-box-shadow: 0px 14px 33px -6px rgba(128,128,128,0.39);
+    box-shadow: 0px 14px 33px -6px rgba(128,128,128,0.39);
+}
+.card-image{
+    width: 100%;
+}
+.card-image img{
+    width: 100%;
+    border-radius: 15px 15px 0 0;
+}
+.summary {
+    width: 80%;
+    margin: auto;
+}
+.summary-title{
+    text-align: center;
+    font-weight: 900 bold;
+}
+.summary p {
+    font-size: 16px;
+    text-align: center;
+    padding: 0 10px;
+    color: gray;
+}
+.plan {
+    border-radius: 5px;
+    margin: 5px auto;
+    background-color: whitesmoke;
+    width: 80%;
+    height: auto;
+}
+.plan img {
+    color: hsl(223, 47%, 23%);
+    width: 37px;
+    padding: 15px;
+    vertical-align: middle;
+}
+.plan-type {
+    display: inline-block;
+    vertical-align: middle;        
+}
+.plan-type-title{
+    font-weight: 700;
+    font-size: 14px;
+}
+.price {
+    color: gray;
+    font-size: 14px;
+}
+.plan-change {           
+    display: inline;        
+}
+.plan-change a {
+    float: right;
+    font-size: small;
+    font-weight: 900;    
+    margin: 25px 15px;   
+    color: var(--bright-blue);    
+}
+
+.actions {
+    width: 80%;
+    margin: 20px auto;
+    vertical-align: middle;      
+}
+.actions .btn { 
+    cursor: pointer; 
+    border: none;  
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 10px;
+    font-weight: 700;
+}
+.proceed {
+    background-color: var(--bright-blue);
+    color: white;    
+    -webkit-box-shadow: 0px 5px 30px -13px var(--bright-blue);
+    -moz-box-shadow: 0px 5px 30px -13px var(--bright-blue);
+    box-shadow: 0px 5px 30px -13px var(--bright-blue);
+}
+.cancel{
+    background-color: white;
+    color: gray;
+}
+@media only screen and (max-width: 600px) {
+    .background {
+        background-image: url(/images/pattern-background-mobile.svg);
+        background-repeat: no-repeat;
+        background-size: 100%;
+        background-color: var(--pale-blue); /* Aplicará solo desde 0 hasta 600px */
+    }
+  }
